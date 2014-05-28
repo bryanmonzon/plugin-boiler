@@ -65,7 +65,7 @@ final class FFW_BOILER {
   private function setup_constants() {
     // Plugin version
     if ( ! defined( 'FFW_BOILER_VERSION' ) )
-      define( 'FFW_BOILER_VERSION', '1.0' );
+      define( 'FFW_BOILER_VERSION', '0.1' );
 
     // Plugin Folder Path
     if ( ! defined( 'FFW_BOILER_PLUGIN_DIR' ) )
