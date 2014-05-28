@@ -53,7 +53,7 @@ function ffw_boiler_install() {
     // Add the transient to redirect
     set_transient( '_ffw_boiler_activation_redirect', true, 30 );
 }
-register_activation_hook( NAMATI_NETWORK_PLUGIN_FILE, 'ffw_boiler_install' );
+register_activation_hook( FFW_BOILER_PLUGIN_FILE, 'ffw_boiler_install' );
 
 /**
  * Post-installation
