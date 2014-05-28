@@ -18,9 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Creates the admin menu pages under Donately and assigns them their global variables
  *
- * @since  1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @global  $ffw_boiler_settings_page
-  * @return void
+ * @return void
  */
 function ffw_boiler_add_menu_page() {
     global $ffw_boiler_settings_page;

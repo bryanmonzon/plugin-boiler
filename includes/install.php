@@ -2,9 +2,9 @@
 /**
  * Install Function
  *
- * @package     NAMATI_NETWORK
+ * @package     FFW_BOILER
  * @subpackage  Functions/Install
- * @copyright   Copyright (c) 2014, Pippin Williamson
+ * @copyright   Copyright (c) 2014, Fifty & Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since       1.0
 */
@@ -16,12 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Install
  *
  * Runs on plugin install by setting up the post types, custom taxonomies,
- * flushing rewrite rules to initiate the new 'downloads' slug and also
+ * flushing rewrite rules to initiate the new 'boiler' slug and also
  * creates the plugin and populates the settings fields for those plugin
- * pages. After successful install, the user is redirected to the NAMATI_NETWORK Welcome
+ * pages. After successful install, the user is redirected to the FFW_BOILER Welcome
  * screen.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @global $wpdb
  * @global $ffw_boiler_settings
  * @global $wp_version
@@ -61,7 +62,8 @@ register_activation_hook( FFW_BOILER_PLUGIN_FILE, 'ffw_boiler_install' );
  * Runs just after plugin installation and exposes the
  * ffw_boiler_after_install hook.
  *
- * @since 1.7
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
  */
 function ffw_boiler_after_install() {

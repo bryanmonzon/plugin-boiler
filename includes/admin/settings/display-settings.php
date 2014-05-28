@@ -18,7 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * Renders the options page contents.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @global $ffw_boiler_settings Array of all the SQCASH Options
  * @return void
  */

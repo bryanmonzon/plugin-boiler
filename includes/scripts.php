@@ -6,6 +6,12 @@
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+/**
+ * Loads scripts needed for the admin area
+ *
+ * @since  0.1
+ * @author Bryan Monzon
+ */
 function ffw_boiler_load_admin_scripts( $hook ) 
 {
     global $post,

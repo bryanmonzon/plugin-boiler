@@ -4,7 +4,7 @@
  *
  * @package     Boiler
  * @subpackage  Admin/Classes
- * @copyright   Copyright (c) 2013, Bryan Monzon
+ * @copyright   Copyright (c) 2013, Fifty & Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since       1.0
  */
@@ -17,7 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Register all the meta boxes for the Download custom post type
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
  */
 function ffw_boiler_add_meta_box() {
@@ -38,7 +39,8 @@ add_action( 'add_meta_boxes', 'ffw_boiler_add_meta_box' );
 /**
  * Sabe post meta when the save_post action is called
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param int $post_id Download (Post) ID
  * @global array $post All the data of the the current post
  * @return void
@@ -90,7 +92,8 @@ add_action( 'save_post', 'ffw_boiler_meta_box_save' );
  * Extensions (as well as the core plugin) can add items to the main download
  * configuration metabox via the `ffw_boiler_meta_box_fields` action.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
  */
 function ffw_boiler_render_meta_box() {
@@ -102,7 +105,14 @@ function ffw_boiler_render_meta_box() {
 
 
 
-
+/**
+ * Render the fields
+ *
+ * @since  0.1
+ * @author Bryan Monzon
+ * @param  [type] $post [description]
+ * @return [type]       [description]
+ */
 function ffw_boiler_render_fields( $post )
 {
     global $post, $ffw_boiler_settings; 
@@ -123,8 +133,6 @@ function ffw_boiler_render_fields( $post )
         </p>
     </div>
     
-
-
     <?php
 
 }

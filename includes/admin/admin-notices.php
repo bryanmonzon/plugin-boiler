@@ -4,7 +4,7 @@
  *
  * @package     FFW Boiler
  * @subpackage  Admin/Notices
- * @copyright   Copyright (c) 2013, Bryan Monzon
+ * @copyright   Copyright (c) 2013, FIfty & Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since       1.0
 */
@@ -15,8 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Admin Messages
  *
- * @since 1.0
- * @global $edd_options Array of all the EDD Options
+ * @since  0.1
+ * @author Bryan Monzon
+ * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
  */
 function ffw_boiler_admin_messages() {

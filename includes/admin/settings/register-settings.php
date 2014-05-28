@@ -4,7 +4,7 @@
  *
  * @package     Fifty Framework Boiler
  * @subpackage  Admin/Settings
- * @copyright   Copyright (c) 2013, Bryan Monzon
+ * @copyright   Copyright (c) 2013, Fifty & Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since       1.0
 */
@@ -18,7 +18,8 @@ if ( !defined( 'ABSPATH' ) ) exit;
  *
  * Looks to see if the specified setting exists, returns default if not
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return mixed
  */
 function ffw_boiler_get_option( $key = '', $default = false ) {
@@ -31,7 +32,8 @@ function ffw_boiler_get_option( $key = '', $default = false ) {
  *
  * Retrieves all plugin settings
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return array FFW_BOILER settings
  */
 function ffw_boiler_get_settings() {
@@ -54,7 +56,8 @@ function ffw_boiler_get_settings() {
 /**
  * Add all settings sections and fields
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
 */
 function ffw_boiler_register_settings() {
@@ -102,7 +105,8 @@ add_action('admin_init', 'ffw_boiler_register_settings');
 /**
  * Retrieve the array of plugin settings
  *
- * @since 1.8
+ * @since  0.1
+ * @author Bryan Monzon
  * @return array
 */
 function ffw_boiler_get_registered_settings() {
@@ -166,7 +170,8 @@ function ffw_boiler_get_registered_settings() {
  *
  * Renders the header.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @return void
  */
@@ -180,7 +185,8 @@ function ffw_boiler_header_callback( $args ) {
  *
  * Renders checkboxes.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -200,7 +206,8 @@ function ffw_boiler_checkbox_callback( $args ) {
  *
  * Renders multiple checkboxes.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -221,7 +228,8 @@ function ffw_boiler_multicheck_callback( $args ) {
  *
  * Renders radio boxes.
  *
- * @since 1.3.3
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -251,7 +259,8 @@ function ffw_boiler_radio_callback( $args ) {
  *
  * Renders text fields.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -277,7 +286,8 @@ function ffw_boiler_text_callback( $args ) {
  *
  * Renders text fields (Hidden, for necessary values in ffw_boiler_settings in the wp_options table)
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -308,7 +318,8 @@ function ffw_boiler_hidden_callback( $args ) {
  *
  * Renders textarea fields.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -333,7 +344,8 @@ function ffw_boiler_textarea_callback( $args ) {
  *
  * Renders password fields.
  *
- * @since 1.3
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -358,7 +370,8 @@ function ffw_boiler_password_callback( $args ) {
  *
  * If a function is missing for settings callbacks alert the user.
  *
- * @since 1.3.1
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @return void
  */
@@ -371,7 +384,8 @@ function ffw_boiler_missing_callback($args) {
  *
  * Renders select fields.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -402,7 +416,8 @@ function ffw_boiler_select_callback($args) {
  *
  * Renders color select fields.
  *
- * @since 1.8
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -433,7 +448,8 @@ function ffw_boiler_color_select_callback( $args ) {
  *
  * Renders rich editor fields.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @global $wp_version WordPress Version
@@ -462,7 +478,8 @@ function ffw_boiler_rich_editor_callback( $args ) {
  *
  * Renders upload fields.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -489,7 +506,8 @@ function ffw_boiler_upload_callback( $args ) {
  *
  * Renders color picker fields.
  *
- * @since 1.6
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
  * @return void
@@ -518,7 +536,8 @@ function ffw_boiler_color_callback( $args ) {
  *
  * Adds a do_action() hook in place of the field
  *
- * @since 1.0.8.2
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $args Arguments passed by the setting
  * @return void
  */
@@ -535,7 +554,8 @@ function ffw_boiler_hook_callback( $args ) {
  * Adds a settings error (for the updated message)
  * At some point this will validate input
  *
- * @since 1.0.8.2
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $input The value inputted in the field
  * @return string $input Sanitizied value
  */
@@ -597,7 +617,8 @@ function ffw_boiler_settings_sanitize( $input = array() ) {
 /**
  * Sanitize text fields
  *
- * @since 1.8
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $input The field value
  * @return string $input Sanitizied value
  */
@@ -608,8 +629,8 @@ add_filter( 'ffw_boiler_settings_sanitize_text', 'ffw_boiler_sanitize_text_field
 
 /**
  * Retrieve settings tabs
- *
- * @since 1.8
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $input The field value
  * @return string $input Sanitizied value
  */

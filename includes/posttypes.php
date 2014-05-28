@@ -2,7 +2,7 @@
 /**
  * Post Type Functions
  *
- * @package     FFW
+ * @package     FFW_BOILER
  * @subpackage  Functions
  * @copyright   Copyright (c) 2013, Fifty and Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
@@ -15,7 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Registers and sets up the Downloads custom post type
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
  */
 function setup_ffw_boiler_post_types() {
@@ -74,7 +75,8 @@ add_action( 'init', 'setup_ffw_boiler_post_types', 1 );
 /**
  * Get Default Labels
  *
- * @since 1.0.8.3
+ * @since  0.1
+ * @author Bryan Monzon
  * @return array $defaults Default labels
  */
 function ffw_boiler_get_default_labels() {
@@ -99,7 +101,8 @@ function ffw_boiler_get_default_labels() {
 /**
  * Get Singular Label
  *
- * @since 1.0.8.3
+ * @since  0.1
+ * @author Bryan Monzon
  * @return string $defaults['singular'] Singular label
  */
 function ffw_boiler_get_label_singular( $lowercase = false ) {
@@ -110,7 +113,8 @@ function ffw_boiler_get_label_singular( $lowercase = false ) {
 /**
  * Get Plural Label
  *
- * @since 1.0.8.3
+ * @since  0.1
+ * @author Bryan Monzon
  * @return string $defaults['plural'] Plural label
  */
 function ffw_boiler_get_label_plural( $lowercase = false ) {
@@ -121,7 +125,8 @@ function ffw_boiler_get_label_plural( $lowercase = false ) {
 /**
  * Change default "Enter title here" input
  *
- * @since 1.4.0.2
+ * @since  0.1
+ * @author Bryan Monzon
  * @param string $title Default title placeholder text
  * @return string $title New placeholder text
  */
@@ -140,7 +145,8 @@ add_filter( 'enter_title_here', 'ffw_boiler_change_default_title' );
 /**
  * Registers the custom taxonomies for the downloads custom post type
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @return void
 */
 function ffw_boiler_setup_taxonomies() {
@@ -185,7 +191,8 @@ add_action( 'init', 'ffw_boiler_setup_taxonomies', 0 );
  *
  * Returns an array of with all updated messages.
  *
- * @since 1.0
+ * @since  0.1
+ * @author Bryan Monzon
  * @param array $messages Post updated message
  * @return array $messages New post updated messages
  */
