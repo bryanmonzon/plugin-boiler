@@ -111,6 +111,8 @@ final class FFW_BOILER {
 
     }
 
+    require_once FFW_BOILER_PLUGIN_DIR . '/includes/install.php';
+
 
   }
 
