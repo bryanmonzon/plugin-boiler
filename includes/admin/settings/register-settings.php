@@ -136,7 +136,7 @@ function ffw_boiler_get_registered_settings() {
                 'boiler_slug' => array(
                     'id' => 'boiler_slug',
                     'name' => __( ffw_boiler_get_label_plural() . ' URL Slug', 'ffw_boiler' ),
-                    'desc' => __( 'Enter the slug you would like to use for your ' . strtolower( ffw_boiler_get_label_plural() ) . '.'  , 'ffw_boiler' ),
+                    'desc' => __( 'Enter the slug you would like to use for your ' . strtolower( ffw_boiler_get_label_plural() ) . '. (<em>You will need to <a href="' . admin_url( 'options-permalink.php' ) . '">refresh permalinks</a>, after saving changes</em>).'  , 'ffw_boiler' ),
                     'type' => 'text',
                     'size' => 'medium',
                     'std' => strtolower( ffw_boiler_get_label_plural() )
@@ -160,14 +160,14 @@ function ffw_boiler_get_registered_settings() {
                 'disable_archive' => array(
                     'id' => 'disable_archive',
                     'name' => __( 'Disable Archives Page', 'ffw_boiler' ),
-                    'desc' => __( 'Check to disable archives page', 'ffw_boiler' ),
+                    'desc' => __( 'Check to disable archives page. (<em>You might need to <a href="' . admin_url( 'options-permalink.php' ) . '">refresh permalinks</a>, after saving changes</em>).', 'ffw_boiler' ),
                     'type' => 'checkbox',
                     'std' => ''
                 ),
                 'exclude_from_search' => array(
                     'id' => 'exclude_from_search',
                     'name' => __( 'Exclude from Search', 'ffw_boiler' ),
-                    'desc' => __( 'Check to exclude from search', 'ffw_boiler' ),
+                    'desc' => __( 'Check to exclude from search. (<em>You might need to <a href="' . admin_url( 'options-permalink.php' ) . '">refresh permalinks</a>, after saving changes</em>)', 'ffw_boiler' ),
                     'type' => 'checkbox',
                     'std' => ''
                 ),
