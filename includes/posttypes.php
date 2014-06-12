@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function setup_ffw_boiler_post_types() {
 	global $ffw_boiler_settings;
-	$archives = defined( 'FFW_BOILER_DISABLE_ARCHIVE' ) && FFW_BOILER_DISABLE_ARCHIVE ? false : true;
 
 	//Check to see if anything is set in the settings area.
 	if( !empty( $ffw_boiler_settings['boiler_slug'] ) ) {
@@ -29,6 +28,14 @@ function setup_ffw_boiler_post_types() {
 	} else {
 	    $slug = defined( 'FFW_BOILER_SLUG' ) ? FFW_BOILER_SLUG : 'boiler';
 	}
+
+	if( !isset( $ffw_boiler_settings['disable_archive'] ) ) {
+	    $archives = true;
+	}else{
+	    $archives = false;
+	}
+
+	$exclude_from_search = isset( $ffw_boiler_settings['exclude_from_search'] ) ? true : false;
 	
 	$rewrite  = defined( 'FFW_BOILER_DISABLE_REWRITE' ) && FFW_BOILER_DISABLE_REWRITE ? false : array('slug' => $slug, 'with_front' => false);
 
@@ -53,19 +60,20 @@ function setup_ffw_boiler_post_types() {
 	}
 
 	$boiler_args = array(
-		'labels' 			=> $boiler_labels,
-		'public' 			=> true,
-		'publicly_queryable'=> true,
-		'show_ui' 			=> true,
-		'show_in_menu' 		=> true,
-		'menu_icon'         => 'dashicons-businessman',
-		'query_var' 		=> true,
-		'rewrite' 			=> $rewrite,
-		'map_meta_cap'      => true,
-		'has_archive' 		=> $archives,
-		'show_in_nav_menus'	=> true,
-		'hierarchical' 		=> false,
-		'supports' 			=> apply_filters( 'ffw_boiler_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
+		'labels'              => $boiler_labels,
+		'public'              => true,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_icon'           => 'dashicons-businessman',
+		'query_var'           => true,
+		'exclude_from_search' => $exclude_from_search,
+		'rewrite'             => $rewrite,
+		'map_meta_cap'        => true,
+		'has_archive'         => $archives,
+		'show_in_nav_menus'   => true,
+		'hierarchical'        => false,
+		'supports'            => apply_filters( 'ffw_boiler_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
 	);
 	register_post_type( 'FFW_boiler', apply_filters( 'ffw_boiler_post_type_args', $boiler_args ) );
 	

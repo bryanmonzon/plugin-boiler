@@ -157,6 +157,20 @@ function ffw_boiler_get_registered_settings() {
                     'size' => 'medium',
                     'std' => ffw_boiler_get_label_singular()
                 ),
+                'disable_archive' => array(
+                    'id' => 'disable_archive',
+                    'name' => __( 'Disable Archives Page', 'ffw_boiler' ),
+                    'desc' => __( 'Check to disable archives page', 'ffw_boiler' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
+                'exclude_from_search' => array(
+                    'id' => 'exclude_from_search',
+                    'name' => __( 'Exclude from Search', 'ffw_boiler' ),
+                    'desc' => __( 'Check to exclude from search', 'ffw_boiler' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
             )
         ),
         
