@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 /**
- * Creates the admin menu pages under Donately and assigns them their global variables
+ * Creates the admin menu pages under Boiler and assigns them their global variables
  *
  * @since  0.1
  * @author Bryan Monzon
