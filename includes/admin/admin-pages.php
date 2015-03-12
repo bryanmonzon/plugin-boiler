@@ -2,7 +2,7 @@
 /**
  * Admin Pages
  *
- * @package     Fifty Framework Boiler
+ * @package     Plugin Framework Boiler
  * @subpackage  Admin/Pages
  * @copyright   Copyright (c) 2013, Bryan Monzon
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since  0.1
  * @author Bryan Monzon
- * @global  $ffw_boiler_settings_page
+ * @global  $boiler_settings_page
  * @return void
  */
-function ffw_boiler_add_menu_page() {
-    global $ffw_boiler_settings_page;
+function boiler_add_menu_page() {
+    global $boiler_settings_page;
 
-    $ffw_boiler_settings_page = add_submenu_page( 'edit.php?post_type=ffw_boiler', __( 'Settings', 'ffw_boiler' ), __( 'Settings', 'ffw_boiler'), 'edit_pages', 'boiler-settings', 'ffw_boiler_settings_page' );
+    $boiler_settings_page = add_submenu_page( 'edit.php?post_type=boiler', __( 'Settings', 'boiler' ), __( 'Settings', 'boiler'), 'edit_pages', 'boiler-settings', 'boiler_settings_page' );
     
 }
-add_action( 'admin_menu', 'ffw_boiler_add_menu_page', 11 );
+add_action( 'admin_menu', 'boiler_add_menu_page', 11 );

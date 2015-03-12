@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
   /**
    * Settings screen JS
    */
-  var FFW_BOILER_Settings = {
+  var BOILER_Settings = {
 
     init : function() {
       this.general();
@@ -12,26 +12,26 @@ jQuery(document).ready(function ($) {
 
     general : function() {
 
-      if( $('.ffw_boiler-color-picker').length ) {
-        $('.ffw_boiler-color-picker').wpColorPicker();
+      if( $('.boiler-color-picker').length ) {
+        $('.boiler-color-picker').wpColorPicker();
       }
 
         // Settings Upload field JS
-        if( typeof wp == "undefined" || ffw_boiler_vars.new_media_ui != '1' ){
+        if( typeof wp == "undefined" || boiler_vars.new_media_ui != '1' ){
         //Old Thickbox uploader
-        if ( $( '.ffw_boiler_settings_upload_button' ).length > 0 ) {
+        if ( $( '.boiler_settings_upload_button' ).length > 0 ) {
           window.formfield = '';
 
-          $('body').on('click', '.ffw_boiler_settings_upload_button', function(e) {
+          $('body').on('click', '.boiler_settings_upload_button', function(e) {
             e.preventDefault();
             window.formfield = $(this).parent().prev();
             window.tbframe_interval = setInterval(function() {
-              jQuery('#TB_iframeContent').contents().find('.savesend .button').val(ffw_boiler_vars.use_this_file).end().find('#insert-gallery, .wp-post-thumbnail').hide();
+              jQuery('#TB_iframeContent').contents().find('.savesend .button').val(boiler_vars.use_this_file).end().find('#insert-gallery, .wp-post-thumbnail').hide();
             }, 2000);
-            tb_show(ffw_boiler_vars.add_new_download, 'media-upload.php?TB_iframe=true');
+            tb_show(boiler_vars.add_new_download, 'media-upload.php?TB_iframe=true');
           });
 
-          window.ffw_boiler_send_to_editor = window.send_to_editor;
+          window.boiler_send_to_editor = window.send_to_editor;
           window.send_to_editor = function (html) {
             if (window.formfield) {
               imgurl = $('a', '<div>' + html + '</div>').attr('href');
@@ -39,9 +39,9 @@ jQuery(document).ready(function ($) {
               window.clearInterval(window.tbframe_interval);
               tb_remove();
             } else {
-              window.ffw_boiler_send_to_editor(html);
+              window.boiler_send_to_editor(html);
             }
-            window.send_to_editor = window.ffw_boiler_send_to_editor;
+            window.send_to_editor = window.boiler_send_to_editor;
             window.formfield = '';
             window.imagefield = false;
           }
@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
         var file_frame;
         window.formfield = '';
 
-        $('body').on('click', '.ffw_boiler_settings_upload_button', function(e) {
+        $('body').on('click', '.boiler_settings_upload_button', function(e) {
 
           e.preventDefault();
 
@@ -114,7 +114,7 @@ jQuery(document).ready(function ($) {
     }
 
   }
-  FFW_BOILER_Settings.init();
+  BOILER_Settings.init();
 
 
 });

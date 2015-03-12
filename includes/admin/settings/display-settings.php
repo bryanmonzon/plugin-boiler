@@ -2,7 +2,7 @@
 /**
  * Admin Options Page
  *
- * @package     Fifty Framework Boiler
+ * @package     Plugin Framework Boiler
  * @subpackage  Admin/Settings
  * @copyright   Copyright (c) 2013, Bryan Monzon
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since  0.1
  * @author Bryan Monzon
- * @global $ffw_boiler_settings Array of all the SQCASH Options
+ * @global $boiler_settings Array of all the SQCASH Options
  * @return void
  */
-function ffw_boiler_settings_page() {
-    global $ffw_boiler_settings;
+function boiler_settings_page() {
+    global $boiler_settings;
 
-    $active_tab = isset( $_GET[ 'tab' ] ) && array_key_exists( $_GET['tab'], ffw_boiler_get_settings_tabs() ) ? $_GET[ 'tab' ] : 'general';
+    $active_tab = isset( $_GET[ 'tab' ] ) && array_key_exists( $_GET['tab'], boiler_get_settings_tabs() ) ? $_GET[ 'tab' ] : 'general';
 
     ob_start();
     ?>
@@ -34,7 +34,7 @@ function ffw_boiler_settings_page() {
         <h2>Boiler Settings</h2>
         <h2 class="nav-tab-wrapper">
             <?php
-            foreach( ffw_boiler_get_settings_tabs() as $tab_id => $tab_name ) {
+            foreach( boiler_get_settings_tabs() as $tab_id => $tab_name ) {
 
                 $tab_url = add_query_arg( array(
                     'settings-updated' => false,
@@ -53,8 +53,8 @@ function ffw_boiler_settings_page() {
             <form method="post" action="options.php">
                 <table class="form-table">
                 <?php
-                settings_fields( 'ffw_boiler_settings' );
-                do_settings_fields( 'ffw_boiler_settings_' . $active_tab, 'ffw_boiler_settings_' . $active_tab );
+                settings_fields( 'boiler_settings' );
+                do_settings_fields( 'boiler_settings_' . $active_tab, 'boiler_settings_' . $active_tab );
                 ?>
                 </table>
                 <style>
