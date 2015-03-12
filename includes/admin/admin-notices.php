@@ -17,15 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since  0.1
  * @author Bryan Monzon
- * @global $ffw_boiler_settings Array of all the FFW_BOILER Options
+ * @global $boiler_settings Array of all the BOILER Options
  * @return void
  */
-function ffw_boiler_admin_messages() {
-    global $ffw_boiler_settings;
+function boiler_admin_messages() {
+    global $boiler_settings;
 
-    settings_errors( 'ffw_boiler-notices' );
+    settings_errors( 'boiler-notices' );
 }
-add_action( 'admin_notices', 'ffw_boiler_admin_messages' );
+add_action( 'admin_notices', 'boiler_admin_messages' );
 
 
 /**
@@ -34,16 +34,16 @@ add_action( 'admin_notices', 'ffw_boiler_admin_messages' );
  * @since 1.8
  * @return void
 */
-function ffw_boiler_dismiss_notices() {
+function boiler_dismiss_notices() {
 
-    $notice = isset( $_GET['ffw_boiler_notice'] ) ? $_GET['ffw_boiler_notice'] : false;
+    $notice = isset( $_GET['boiler_notice'] ) ? $_GET['boiler_notice'] : false;
 
     if( ! $notice )
         return; // No notice, so get out of here
 
-    update_user_meta( get_current_user_id(), '_ffw_boiler_' . $notice . '_dismissed', 1 );
+    update_user_meta( get_current_user_id(), '_boiler_' . $notice . '_dismissed', 1 );
 
-    wp_redirect( remove_query_arg( array( 'ffw_boiler_action', 'ffw_boiler_notice' ) ) ); exit;
+    wp_redirect( remove_query_arg( array( 'boiler_action', 'boiler_notice' ) ) ); exit;
 
 }
-add_action( 'ffw_boiler_dismiss_notices', 'ffw_boiler_dismiss_notices' );
+add_action( 'boiler_dismiss_notices', 'boiler_dismiss_notices' );
