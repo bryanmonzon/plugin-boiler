@@ -2,7 +2,7 @@
 /**
  * Admin Pages
  *
- * @package     Fifty Framework Boiler
+ * @package     Plugin Framework Boiler
  * @subpackage  Admin/Pages
  * @copyright   Copyright (c) 2013, Bryan Monzon
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
